@@ -1,0 +1,41 @@
+#spring:
+#  jpa:
+#    properties:
+#      hibernate:
+#        ddl-auto: validate
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        naming:
+#          implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+#          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#  datasource:
+#    driverClassName: org.postgresql.Driver
+#    password: stayfakingstrong
+#    username: postgres
+#    url: jdbc:postgresql://localhost:5432/PeopleLiqui;encrypt=true;trustServerCertificate=true
+#  liquibase:
+#    url: jdbc:postgresql://localhost:5432/PeopleLiqui;encrypt=true;trustServerCertificate=true
+#    user: postgres
+#    password: stayfakingstrong
+#    driver-class-name: org.hibernate.dialect.PostgreSQLDialect
+#    change-log: db/changelog/db.changelog-master.yaml
+
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: stayfakingstrong
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/PeopleLiqui?encrypt=true&trustServerCertificate=true
+  liquibase:
+    url: jdbc:postgresql://localhost:5432/PeopleLiqui?encrypt=true&trustServerCertificate=true
+    user: postgres
+    password: stayfakingstrong
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
